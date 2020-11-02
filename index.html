@@ -3,18 +3,22 @@
   <head><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bootstrap 101 Template</title>
+  <title>Assignment 6</title>
 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
    <Title> Assignment 6- Weather Dashboard</Title>
 
   </head>
   <body>
-    <div  style="background-color:blue;">
+    <div  style="background-color:#0066ff">
         <h1 class="display 5" style="text-align: center; text-decoration-color: white;" >Weather Dashboard</h1>
     </div>
   <h3 class="mt-0">Search for a city:</h3>
@@ -24,15 +28,15 @@
           <input type="text" class="form-control" placeholder="Recipient's username"
             aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
 
-          <div class="input-group-append" id="button-addon4">
-            <button class="btn btn-outline-secondary" type="button">Button</button>
-
+          <div class="btn btn-default" id="run-search">
+            <button class="btn btn-outline-secondary" type="button" >
+              <i class="fa fa-search"></i> Search</button>
           </div>
         </div>
 
-        <ul class="list-group">
+        <ul class="list-group"                                                                                                                                                                                                                        >
           <li class="list-group-item active">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item active ">Dapibus ac facilisis in</li>
           <li class="list-group-item">Morbi leo risus</li>
           <li class="list-group-item">Porta ac consectetur ac</li>
           <li class="list-group-item">Vestibulum at eros</li>
@@ -58,126 +62,98 @@
 
           <h3 class="mt-0">Search for a city:</h3>
         <div class="card" style="width: 100em; border:fading ; background-color: #efefef;">
-          <h5 class="card-title">text content</h5>
-          <p class="card-text"></p>
-          <img class="card-img-top" src="..." style="width:20;height:20;" alt="Card image cap">
+
+          <h2 class="card-title"> Atlanta (8/15/2019)<i class="fa fa-cloud fa-3x" aria-enabled="true"></i></h2>
           <div class="card-body">
-            <p class="card-text">text </p>
-            <p class="card-text">text </p>
-            <p class="card-text">color </p>
-            <p class="card-text">color </p>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Temperature:  </p>
+            <p class="card-text">Humidity:  </p>
+            <p class="card-text">Windspeed:  </p>
+            <p class="card-text">Visibility: </p>
+
+
           </div>
         </div>
           <div id="statement" style=" border:fading ; background-color: #efefef; width:100; height:500">
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sequi ex quam quia iste, nemo molestias
-                dolor, qui dolorem voluptatibus ipsa maxime voluptas et deserunt porro repellendus veritatis nesciunt quisquam.
+             <p>
               </p>
 
           </div>
 
         </div>
         <div class="row-sm-4">
-
+          <h2 class="card-title">6-Day Weather cast</h2>
 
           <div class="row">
             <div class="col-sm">
-              <div class="card" style="width: 10em;">
-                <h5 class="card-title">text content</h5>
-                <p class="card-text"></p>
-                <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text"></p>
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="card" style="width: 10em; background-color:#0066ff">
+               <div class="card-body">
+                  <h5 class="card-title">8/16/2019</h5>
+                  <p class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
+                  <p class="card-text">Temp:   </p>
+                  <p class="card-text">Humidity: </p>
                 </div>
               </div>
            </div>
           <div class="col-sm">
-            <div class="card" style="width: 10em;">
-              <h5 class="card-title">text content</h5>
-              <p class="card-text"></p>
-              <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text"></p>
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+
+              <div class="card" style="width: 10em;background-color:#0066ff">
+                <div class="card-body">
+                  <h5 class="card-title">8/16/2019</h5>
+                  <p class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
+                  <p class="card-text">Temp: </p>
+                  <p class="card-text">Humidity: </p>
+                </div>
               </div>
             </div>
-            </div>
             <div class="col-sm">
-              <div class="card" style="width: 10em;">
-                <h5 class="card-title">text content</h5>
-                <p class="card-text"></p>
-                <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
+                <div class="card" style="width: 10em;background-color:#0066ff">
+                  <div class="card-body">
+                    <h5 class="card-title">8/16/2019</h5>
+                    <p class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
+                    <p class="card-text">Temp: </p>
+                    <p class="card-text">Humidity: </p>
+                  </div>
+                </div>
+          </div>
+            <div class="col-sm">
+                  <div class="card" style="width: 10em;background-color:#0066ff; text-emphasis-color: white;">
+                    <div class="card-body">
+                      <h5 class="card-title">8/16/2019</h5>
+                      <p class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
+                      <p class="card-text">Temp: </p>
+                      <p class="card-text">Humidity: </p>
+                    </div>
+                  </div>
+
+          </div>
+          <div class="col-sm">
+            <div class="col-sm">
+              <div class="card" style="width: 10em; background-color:#00aaff">
                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">8/16/2019</h5>
+                  <p class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
+                  <p class="card-text">Temp: </p>
+                  <p class="card-text">Humidity: </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="col-sm">
+              <div class="card" style="width: 10em;background-color:#00aaff">
+                <div class="card-body">
+                  <h5 class="card-title">8/16/2019</h5>
+                  <p class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
+                  <p class="card-text">Temp: </p>
+                  <p class="card-text">Humidity: </p>
                 </div>
               </div>
           </div>
-            <div class="col-sm">
-              <div class="card" style="width: 10em;">
-                <h5 class="card-title">text content</h5>
-                <p class="card-text"></p>
-                <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text"></p>
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="width: 10em;">
-              <h5 class="card-title">text content</h5>
-              <p class="card-text"></p>
-              <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text"></p>
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="width: 10em;">
-              <h5 class="card-title">text content</h5>
-              <p class="card-text"></p>
-              <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text"></p>
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="width: 10em;">
-              <h5 class="card-title">text content</h5>
-              <p class="card-text"></p>
-              <img class="card-img-top" src="cupcakes.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text"></p>
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+
         </div>
-        </div>
+
           <div class="row-sm-1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sequi ex quam quia iste, nemo molestias
-              dolor, qui dolorem voluptatibus ipsa maxime voluptas et deserunt porro repellendus veritatis nesciunt quisquam.
+            <p>
             </p>
           </div>
 
@@ -187,15 +163,16 @@
 
     <script>
 
-      var api = "http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=785662ad83b63b8ed0c95125360514fa"
+     var api = "http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=785662ad83b63b8ed0c95125360514fa"
 
 
-        $.ajax({
-          url: api,
-          method: "GET"
-        }).then(function (response) {
-             $('div#statement').text( JSON.parse(response));
-        });
+      //   $.ajax({
+      //     url: api,
+      //     method: "GET"
+      //   }).then(function (response) {
+      //       console.log(JSON.parse(response));
+      //       //  $('div#statement').text( JSON.parse(response));
+      //   });
 
 
     </script>
