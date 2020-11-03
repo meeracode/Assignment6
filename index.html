@@ -4,49 +4,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Assignment 6</title>
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-   <Title> Assignment 6- Weather Dashboard</Title>
-
+   <title> Assignment 6- Weather Dashboard</title>
   </head>
   <body>
-
     <div  style="background-color:#00aaff">
         <h1 class="display 5" style="text-align: center; text-decoration-color: white;" >Weather Dashboard</h1>
     </div>
-  <h3 class="mt-0">Search for a city:</h3>
+     <h3 class="mt-0">Search for a city:</h3>
     <div class="row">
       <div class="col-sm-3" style="background-color:#efefef">
-        <div class="input-group">
-          <form class="form-inline my-2 my-lg-2 ">
-            <input id="placetxt" class="form-control mr-sm-2" type="text" placeholder="Search">
-          <div class="btn btn-default" id="run-search">
-          <button id="searchbtn" class="btn btn-outline-primary my-2 my-sm-0 " type="submit"><i class="fa fa-search"></i> Search</button>
 
-          </div>
-        </form>
-        </div>
+              <!-- <button id="searchbtn" class="btn btn-outline-primary my-2 my-sm-0 " type="submit" ><i class="fa fa-search"></i>Search</button> -->
 
-        <!-- <ul class="list-group"                                                                                                                                                                                                                        >
-          <li class="list-group-item active"></li>
-          <li class="list-group-item active"></li>
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
+              <label for="search">Search Term:</label>
+              <input type="text" class="form-control" id="search-term2">
 
-        </ul> -->
+                            <select id="selecttag"> Select an item
+                              <option> Meridas</option>
+                              <option> Lhasa </option>
+                              <option> İstanbul </option>
+                              <option> Mao </option>
+                              <option> Nalchik </option>
+                            </select>
+
+
+              <button type="submit" class="btn btn-default" id="run-search2">
+                <i class="fa fa-search"></i> Search</button>
+              <button class="btn btn-default" id="clear-all2">
+                <i class="fa fa-trash"></i> Clear Results</button>
 
         <div class="card">
-
           <!-- card Heading for the retrieved articles box -->
           <div class="card-header ">
             <strong>
@@ -54,12 +45,14 @@
           </div>
 
           <!-- This main card will hold each of the resulting articles -->
-          <div class="card-body" id="article-section">
+          <div class="card-body" id="search-section">
           </div>
         </div>
+    </div>
 
-              </div>
-      <div class="col-sm-9">
+
+
+      <div class="col-sm-8">
         <div class="row-sm-4">
 
           <!-- <h3 class="mt-0">Search for a city:</h3> -->
@@ -72,13 +65,11 @@
             <p id="sunrisetoday" class="card-text"> </p>
             <p id="sunsetoday" class="card-text"> </p>
 
-
           </div>
         </div>
           <div id="statement" style=" border:fading ; background-color: #efefef; width:100; height:500">
              <p>
               </p>
-
           </div>
 
         </div>
@@ -101,6 +92,7 @@
                 </div>
               </div>
            </div>
+
           <div class="col-sm">
 
               <div class="card text-white" style="width: 10em;background-color:#0066ff">
@@ -132,25 +124,22 @@
                   </div>
                 </div>
           </div>
-            <div class="col-sm">
+              <div class="col-sm">
                   <div class="card" style="width: 10em;background-color:#00aaff; text-emphasis-color: white;">
                     <div class="card-body">
                       <h5  id="date3" class="card-title"></h5>
                       <p  class="card-text"><i class="fa fa-cloud fa-3x" aria-enabled="flase"></i> </p>
                       <!-- <p id="title4" class="card-text">Temp: </p> -->
-
                       <p id="windspeed3" class="card-text"> </p>
                       <p id="sunrise3" class="card-text"> </p>
                       <p id="sunset3" class="card-text"> </p>
                       <p id="weather.icon3" class="card-text"> </p>
                       <p id="clouds3" class="card-text"> </p>
-
                     </div>
                   </div>
-
-          </div>
-          <div class="col-sm">
+            </div>
             <div class="col-sm">
+              <div class="col-sm">
               <div class="card" style="width: 10em; background-color:#00aaff">
                 <div class="card-body">
                   <h5 id="date2" class="card-title"> </h5>
@@ -162,8 +151,6 @@
                   <p id="sunset2" class="card-text"> </p>
                   <p id="weather.icon2" class="card-text"> </p>
                   <p id="clouds2" class="card-text"> </p>
-
-
                 </div>
               </div>
             </div>
@@ -189,11 +176,13 @@
           </div>
 
         </div>
+      </div>
+      </div>
+    </div>
 
-          <div class="row-sm-1">
-            <p>
-            </p>
-          </div>
+
+</div>
+
 
             <!-- <div class="row">
               <div class="col-sm-12">
@@ -207,32 +196,45 @@
             </div> -->
 
 
-    </div>
- </div>
 
 
     <script>
-      places =
-    function func(){
-      console.log($('.placetxt').val());
-    }
 
-    $('.searchbtn').on("click", function () {
-      console.log($('.placetxt').val());
+    $('#run-search2').on('click', function (event) {
+      var select = document.getElementById('selecttag');
+      ids = 2172797;
+      var api = "http://api.openweathermap.org/data/2.5/weather?id=" + ids + "&appid=785662ad83b63b8ed0c95125360514fa"
+      console.log(select.selectedIndex, select.options[select.selectedIndex].text);
+      switch( select.selectedIndex){
+          case 0:
+            ids= 3632308;
 
+          case 1:
+            ids = 1280737;
 
-    });
+          case 2:
+          ids = 745042;
 
-  console.log("place"+$('placetxt').val());
-     var api = "http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=785662ad83b63b8ed0c95125360514fa"
+          case 3:
+          ids = 3496831;
 
+          case 4:
+          ids = 523523;
+
+      }
+      api = "http://api.openweathermap.org/data/2.5/weather?id=" + ids + "&appid=785662ad83b63b8ed0c95125360514fa"
+
+      var ptag = $("<\p>", {
+        text: select.options[select.selectedIndex].text
+      });
+
+      $('#search-section').append("<p>" + select.options[select.selectedIndex].text + " </p>");
+      $('#search-section').append(ptag);
 
       $.ajax({
          url: api,
          method: "GET"
        }).then(function (response) {
-
-
 
 
           console.log(
@@ -245,11 +247,6 @@
 
           for( var i=1; i < 7; i ++){
 
-              // <p id="humidity1" class="card-text">Humidity: </p>
-              // <p id="windspeed1" class="card-text">Wind Speed: </p>
-              // <p id="sunrise1" class="card-text">Sunrise: </p>
-              // <p id="sunset1" class="card-text">Sunset: </p>
-              // <p id="weather.icon" class="card-text">Weathr: </p>
 
               // <p id="clouds1" class="card-text">icon : </p>
               // var ptag = $("<\p>", {
@@ -281,10 +278,107 @@
          $('#sunsetoday').append("Sunset: " + response.sys.sunset);
 
 
-
-
           //   //  $('div#statement').text( JSON.parse(response));
       });
+    });
+
+
+  //  $('#run-search2').on('click', function (event) {
+  // var ids = mapss[select.options[select.selectedIndex].text];
+  var select = document.getElementById('selecttag');
+
+  ids = 2172797;
+  var api = "http://api.openweathermap.org/data/2.5/weather?id=" + ids + "&appid=785662ad83b63b8ed0c95125360514fa"
+
+  console.log(select.selectedIndex, select.options[select.selectedIndex].text);
+
+  switch (select.selectedIndex) {
+    case 0:
+      ids = 3632308;
+
+    case 1:
+      ids = 1280737;
+
+    case 2:
+      ids = 745042;
+
+    case 3:
+      ids = 3496831;
+
+    case 4:
+
+      ids = 523523;
+
+  }
+  api = "http://api.openweathermap.org/data/2.5/weather?id=" + ids + "&appid=785662ad83b63b8ed0c95125360514fa"
+
+
+
+  var ptag = $("<\p>", {
+    text: select.options[select.selectedIndex].text
+  });
+
+  $('#search-section').append("<p>" + select.options[select.selectedIndex].text + " </p>");
+  $('#search-section').append(ptag);
+
+  $.ajax({
+    url: api,
+    method: "GET"
+  }).then(function (response) {
+
+
+    console.log(
+      " humidity:  " + response.main.humidity + "\n" +
+      " wind speed: " + response.wind.speed + "\n" +
+      " sunrise: " + response.sys.sunrise + "\n" +
+      " sunset:  " + response.sys.sunrise + "\n" +
+      " clouds: " + response.clouds + "\n" +
+      " weather.icon:  " + response.weather[0].icon + response.dt);
+
+    for (var i = 1; i < 7; i++) {
+
+
+      // <p id="clouds1" class="card-text">icon : </p>
+      // var ptag = $("<\p>", {
+      //   text:
+      //     "temp:" + response.main.temp +
+      //     "class:card-text" +
+      //     "humidity:" + response.main.humidity +
+      //     " wind speed: " + response.wind.speed + "\n" +
+      //     " sunrise: " + response.sys.sunrise + "\n" +
+      //     " sunset:  " + response.sys.sunrise + "\n" +
+      //     " clouds: " + response.clouds + "\n" +
+      //     " weather.icon:  " + response.weather[0].icon};
+
+
+      $('#humidity' + i).append("humidity: " + response.main.humidity);
+      $('#windspeed' + i).append("Wind Speed: " + response.wind.speed + "\n");
+      $('#sunrise' + i).append("sunrise: " + response.sys.sunrise + "\n");
+      $('#sunset' + i).append("sunset: " + response.sys.sunset + "\n");
+      $('#date' + i).append("Time Now: " + response.dt + "\n");
+      // $('#weather.icon'+i).append(" icon" + response.weather[0].icon + "\n");
+      // $( '#title'+ i).append( "note");
+
+    }
+
+    $('#placetoday').append("Longitue: " + response.coord.lon + "Latitude " + response.coord.lat);
+    $('#humiditytoday').append("humidity: " + response.main.humidity);
+    $('#windspeedtoday').append("Wind Speed: " + response.wind.speed);
+    $('#sunrisetoday').append("Sunrise: " + response.sys.sunrise);
+    $('#sunsetoday').append("Sunset: " + response.sys.sunset);
+
+
+    //   //  $('div#statement').text( JSON.parse(response));
+    });
+
+
+
+
+
+
+             $('#clear-all2').on('click', function (event) {
+                $('#article-section').empty();
+              });
 
 
     </script>
